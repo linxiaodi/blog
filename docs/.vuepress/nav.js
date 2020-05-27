@@ -8,5 +8,5 @@ module.exports = [
     link: '/java/'
   },
   { text: 'Github', link: 'https://github.com/linxiaodi/blog', target:'_blank' }
- 
+  
 ]

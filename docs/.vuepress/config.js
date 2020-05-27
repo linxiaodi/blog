@@ -6,5 +6,7 @@ module.exports = {
   },
   themeConfig: {
     nav: require('./nav'),
+    collapsable: false,
+    sidebar: require('./sidebar')
   }
 }
