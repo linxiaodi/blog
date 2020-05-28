@@ -6,3 +6,4 @@ rm *.css
 mv ./docs/.vuepress/dist/* ./
 git add .
 git commit -m 'build depoly'
+git push
