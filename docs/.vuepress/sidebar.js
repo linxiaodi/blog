@@ -8,5 +8,12 @@ module.exports = {
         'render/'
       ]
     }
+  ],
+  '/java/': [
+    {
+      sidebarDepth: 3,
+      collapsable: false,
+      children: ['basic/']
+    }
   ]
 }
