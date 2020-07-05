@@ -117,3 +117,30 @@ jdk里面特殊类型，jdk创建它，jdk专门使用虚拟机特殊指令创�
 **重载匹配规则**：就近匹配比如`f(1)`匹配优先级又高到低：`f(int i), f(Integer i), f(Number i), f(Object i)`。也就是说谁距`int`最近谁就会被命中（明显的父子继承关系）。
 
 **重载歧义**：比如`f(null)`。既能匹配`f(Number i)`也能匹配`f(ArrayList i)`，因为2者你比较不出来谁更接近参数类型（因为都是继承Object）。因此需要做一层强制类型转换。
+
+
+### 限定符
+
+- public 任何⼈都能访问
+- protected 只有⼦类可以访问和同⼀个包的可以访问
+- package private 只有同⼀个包的类可以访问(前缀什么都不加**默认值**)
+- private 只有⾃⼰可以访问 
+
+### getter setter
+
+- `String: name`：`getName`，`setName`
+- `boolean: cute`：`isCute`，`setCute`
+
+用途：JSON序列化和反序列化，也就是把一个**对象转换成JSON格式字符串**，还有把**JSON格式字符串转换成对象实例**。
+
+
+### 类的访问限定符
+
+`class`，不添加任何访问限定符，默认`package private`，只能在同一个包内部使用。**强行声明同一个包名，可以绕过包级私有。强行获得该类。**
+
+私有内部类，static private class [name]。只允许在该类下进行访问。
+
+### 模块化（JDK9+）
+
+JDK8之前都只有包的概念，jdk9以后有模块，也就是允许模块封装若干个包，暴露API。
+
